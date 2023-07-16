@@ -41,7 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(leg.jpg) no-repeat;
+    background: url(../images/leg.jpg) no-repeat;
     background-size: cover;
 }
 .wrapper{

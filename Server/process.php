@@ -8,12 +8,13 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 //SQL 
-$sql = "INSERT INTO users (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password')";
+$sql = "INSERT INTO register (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password')";
 
 if ($conn->query($sql) === TRUE) {
+
     echo "Registration successful.";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 $conn->close();

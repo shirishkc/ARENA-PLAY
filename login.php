@@ -1,8 +1,9 @@
+<!-- Purpose: Login page for the website -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Login</title>
-    <link href="login.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
 </head>
 <body>
         <header>
@@ -10,7 +11,7 @@
             <nav class="navigation">
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="#">Booking</a>
+                <a href="booking.html">Booking</a>
                 <a href="#">Contact</a>
                 <a href="#">
                     <svg class="person" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -23,15 +24,15 @@
 <div class="wrapper">
 <div class="form-box login">
     <h2>Login</h2>
-    <form action="#">
+    <form action="Server/loginsucess.php" method="POST">
         <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required>
-            <label>Email</label>
+            <input type="text" name= "phone" required>
+            <label>Email/Phone no.</label>
         </div>
         <div class="input-box">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" required>
+            <input type="password" name="password" required>
             <label>Password</label>
         </div>
         <div>
@@ -45,27 +46,27 @@
 </div>
 <div class="form-box register">
     <h2>Register</h2>
-    <form action="#">
+    <form action="Server/process.php" method="POST">
         <div class="input-box">
             <span class="icon"><ion-icon name="person"></ion-icon></span>
-            <input type="text" required>
-            <label>Username</label>
+            <input type="text" name="name">
+            <label>Name</label>
         </div>
         <div class="input-box">
             <span class="icon"><ion-icon name="call"></ion-icon></span>
-            <input type="integer" required>
+            <input type="integer" name="phone" required>
             <label>Phone number</label> 
              <div class="input-box">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
+                <input type="email" name="email">
                 <label>Email</label>
             </div>
             <div class="input-box">
                 <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" required>
+                <input type="password" name="password" required>
                 <label>Password</label>
         </div> 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn" name="register">Register</button>
         <div class="log">
             Already have an account? <a class="login-link" href="#">Login</a>
         </div>
