@@ -11,7 +11,7 @@
             <nav class="navigation">
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="booking.html">Booking</a>
+                <a href="booking.php">Booking</a>
                 <a href="#">Contact</a>
                 <a href="#">
                     <svg class="person" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -28,7 +28,7 @@
         <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
             <input type="text" name= "phone" required>
-            <label>Email/Phone no.</label>
+            <label>Phone no.</label>
         </div>
         <div class="input-box">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
@@ -46,7 +46,7 @@
 </div>
 <div class="form-box register">
     <h2>Register</h2>
-    <form action="Server/process.php" method="POST">
+    <form action="Server/registersucess.php" method="POST">
         <div class="input-box">
             <span class="icon"><ion-icon name="person"></ion-icon></span>
             <input type="text" name="name">

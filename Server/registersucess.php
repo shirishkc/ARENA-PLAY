@@ -1,7 +1,7 @@
 <?php
 include("include/dbcon.php");
 //session
-session_start();
+
 if (isset($_SESSION['SN'])) {
     header("Location: ../booking.php");
     exit();
@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Login successful
     echo "<script>alert('The phone number you entered has already been registered.');</script>";
-    echo"</br><a href='../login.php'>Login</a>";
+    echo"</br><p>Go to <a href='../login.php'>Login</a> page</p>";
     exit();
 }
 $email = $_POST['email'];
