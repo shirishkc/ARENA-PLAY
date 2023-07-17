@@ -1,4 +1,17 @@
-<!-- Purpose: Login page for the website -->
+<!-- session  -->
+<?php
+session_start();
+include("include/dbcon.php");
+if (isset($_SESSION['SN'])) {
+    header("Location: ../booking.php");
+    exit();
+}
+// else{
+//     header("Location: ../login.php");
+//     exit();
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
