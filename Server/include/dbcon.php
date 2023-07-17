@@ -1,5 +1,6 @@
 <?php
-
+//session
+session_start();
 //connect to database
 $dbuser="root";
 $dbpass="";

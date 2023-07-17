@@ -15,7 +15,6 @@ $sql = "SELECT * FROM register WHERE phone = '$phone' AND password = '$password'
 $result = $conn->query($sql);
 
 if ($result === false) {
-    // Query execution error
     die("Query error: " . mysqli_error($conn));
 }
 
@@ -24,8 +23,7 @@ if ($result->num_rows > 0) {
    
     $row = $result->fetch_assoc();
     $sn = $row['SN'];
-    $_SESSION['SN'] = $sn;
-    // $_SESSION['user_id'] = $phone;
+    $sn= $_SESSION['SN'] ;
     header('Location: ../booking.php');
     // echo "Login successful.";
     // echo"</br><a href='../booking.html'>Go to bookings</a> ";

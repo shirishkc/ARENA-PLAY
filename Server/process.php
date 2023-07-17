@@ -19,25 +19,20 @@ $sql = "SELECT * FROM register WHERE phone = '$phone'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Login successful
-    echo '<script>alert("Phone number already exists.");</script>';
+    echo "<script>alert('Phone number already exists.');</script>";
     header("Location: ../login.php");
-
-    
-    // $error_message = "Phone number already exists.";
-    // echo "<p class='error'>$error_message</p>";
-    // echo"<a href='../login.php'>Register again</a> ";
     exit();
 }
 $email = $_POST['email'];
 $password = $_POST['password'];
 
 //SQL 
-$sql = "INSERT INTO register (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password')";
+$sql2 = "INSERT INTO register (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password')";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($sql2) === TRUE) {
     
     
-    header('Location: ../booking.php');
+    header('Location: ../login.php');
 
     echo"
     <script>
@@ -45,7 +40,7 @@ if ($conn->query($sql) === TRUE) {
     </script>";
 
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 }
 
 $conn->close();
