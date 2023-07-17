@@ -37,7 +37,14 @@
       </form>
       <form>
         <input type="button" value="Logout" onclick="window.location.href='logout.php'" />
-
+        <?php
+          $SN = $_SESSION['SN'];
+          $sql = "SELECT * FROM users WHERE SN = '$SN'";
+          $result = $conn->query($sql);
+          // $row = $result->fetch_assoc();
+          // $SN = $row['SN'];
+          echo $SN;
+        ?>
       </form>
     </div>
   </body>

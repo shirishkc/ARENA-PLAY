@@ -19,6 +19,16 @@ if ($result->num_rows > 0) {
     exit();
 }
 $email = $_POST['email'];
+//error if email if already present
+$sql = "SELECT * FROM register WHERE email = '$email'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // Login successful
+    echo "<script>alert('The email you entered has already been registered.');</script>";
+    echo"</br><p>Go to <a href='../login.php'>Login</a> page</p>";
+    exit();
+}
+
 $password = $_POST['password'];
 
 //SQL 

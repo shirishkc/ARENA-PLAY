@@ -2,10 +2,10 @@
 session_start();
 include("../include/dbcon.php");
 
-if (isset($_SESSION['SN'])) {
-    header("Location: ../booking.php");
-    exit();
-}
+// if (isset($_SESSION['SN'])) {
+//     header("Location: ../booking.php");
+//     exit();
+// }
 
 $phone = $_POST['phone'];
 $password = $_POST['password'];
@@ -20,10 +20,12 @@ if ($result === false) {
 
 if ($result->num_rows > 0) {
     // Login successful
-   
+   //set session
+    $sql = "SELECT * FROM register WHERE phone = '$phone'";
+    $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     $sn = $row['SN'];
-    $sn= $_SESSION['SN'] ;
+    $_SESSION['SN'] = $sn;
     header('Location: ../booking.php');
     // echo "Login successful.";
     // echo"</br><a href='../booking.html'>Go to bookings</a> ";
