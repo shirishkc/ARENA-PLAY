@@ -1,6 +1,5 @@
 # ARENA-PLAY
-![home.png](./images/home.png\)
-![about.png](./images/facility.png)
+![home.png](./images/home.png)
 ![facility.png](./images/facility.png)
 ![about.png](./images/about.png)
 ![booking.png](./images/booking.png)
