@@ -18,7 +18,7 @@ header{
     text-decoration: none;
     font-size: 1.5rem;
     margin-left: 40px;
-    color: rgb(255, 255, 255);
+    color: #544c4a;
     cursor:pointer;
     font-weight: 500;
 }
@@ -41,7 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(leg.jpg) no-repeat;
+    background: url(wallpaperflare.com_wallpaper\ \(1\).jpg) no-repeat;
     background-size: cover;
 }
 .wrapper{
@@ -81,7 +81,7 @@ body{
 .form-box h2{
     text-align: center;
     font-size: 2em;
-    color: rgb(11, 100, 11);
+    color: #544c4a;
 }
 .input-box{
     width: 100%;
@@ -95,7 +95,7 @@ body{
     left: 5px;
     top: 50%;
     font-size: 1.2em;
-    color: rgb(11, 100, 11);
+    color:#544c4a;
     font-weight: 500;
     pointer-events: none;
     transform: translateY(-50%);
@@ -108,7 +108,7 @@ body{
     border: none;
     outline: none;
     font-size: 1em;
-    color: rgb(11, 100, 11);
+    color: #544c4a;
     font-weight: 500;
     padding: 0 35px 0 5px;
 }
@@ -116,7 +116,7 @@ body{
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: rgb(11, 100, 11);
+    color: #544c4a;
     line-height: 57px;
 }
 .input-box input:focus~label,
@@ -124,20 +124,20 @@ body{
     top: -5px;
 }
 .forgot{
-   color: rgb(11, 100, 11); 
+   color: #544c4a; 
    position: relative;
     top: -10px;
     right: -55%;
     text-decoration: none;
 }
 .forgot:hover{
-    border-bottom: 2px solid rgb(11, 100, 11);
+    border-bottom: 2px solid #544c4a;
 }
 .btn{
     width: 100%;
     margin: 10px;
     height: 45px;
-    background-color: rgb(11, 100, 11);
+    background-color: #544c4a;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -150,19 +150,23 @@ body{
     margin: 10px;
 }
 .reg a{
-    color: rgb(11, 100, 11);
+    color: #544c4a;
     font-weight: 600;
 }
 .log a{
-    color: rgb(11, 100, 11);
+    color: #544c4a;
     font-weight: 600;
 }
 .btn:hover{
     background-color: white;
-    color: rgb(11, 100, 11);
+    color: #544c4a;
 }
 .wrapper .form-box.register{
     top: 10px;
     position: absolute;
     transform: translateX(400px);
+}
+.logo{
+    width: 90px;
+    cursor: pointer;
 }
