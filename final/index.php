@@ -137,5 +137,8 @@
             speed: 400
         });
     </script>
+    <form>
+        <input type="button" value="Logout" onclick="window.location.href='logout.php'" />
+      </form>
 </body>
 </html>
