@@ -6,7 +6,7 @@ include("../include/dbcon.php");
 //     header("Location: ../booking.php");
 //     exit();
 // }
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+
 $phone = $_POST['phone'];
 $password = $_POST['password'];
 
@@ -44,4 +44,4 @@ if (isset($error_message)) {
 
 // Close the database connection
 $conn->close();
-}
+?>

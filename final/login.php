@@ -1,3 +1,12 @@
+<?php
+session_start();
+include("include/dbcon.php");
+if (isset($_SESSION['SN'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,55 @@
     <link href="login.css" rel="stylesheet">
 </head>
 <body>
+<?php
+// session_start();
+// include("../include/dbcon.php");
+
+// if (isset($_SESSION['SN'])) {
+//     header("Location: ../booking.php");
+//     exit();
+// }
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+$phone = $_POST['phone'];
+$password = $_POST['password'];
+
+// Validate phone number and password
+$sql = "SELECT * FROM register WHERE phone = '$phone' AND password = '$password'";
+$result = $conn->query($sql);
+
+if ($result === false) {
+    die("Query error: " . mysqli_error($conn));
+}
+
+if ($result->num_rows > 0) {
+    // Login successful
+   //set session
+    $sql = "SELECT * FROM register WHERE phone = '$phone'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $sn = $row['SN'];
+    $_SESSION['SN'] = $sn;
+    header('Location: index.php');
+    // echo "Login successful.";
+    // echo"</br><a href='../booking.html'>Go to bookings</a> ";
+    exit();
+} else {
+    // Login failed
+    $error_message = "Invalid phone no. or password.";
+    // echo "Invalid phone number or password.";
+    
+}
+
+// if (isset($error_message)) {
+//     echo "<p class='error'>$error_message</p>";
+//     echo"<a href='../login.php'>Login again</a> ";
+// }
+
+// Close the database connection
+$conn->close();
+}
+?>
         <header>
             <img class="logo" src="Artboard 2_2.png" alt="#">
             <nav class="navigation">
@@ -24,11 +82,17 @@
 <div class="wrapper">
 <div class="form-box login">
     <h2>Login</h2>
-    <form action="sucess/loginsucess.php">
-        <div class="input-box">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+    <?php
+    // Display login error message if there is one
+    if (!empty($error_message)) {
+        echo '<div style="color: red;">' . $error_message . '</div>';
+    }
+    ?>    
+    <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" name="email" required>
-            <label>Email</label>
+            <input type="text" name="phone" required>
+            <label>Email/Phone Number</label>
         </div>
         <div class="input-box">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
@@ -43,6 +107,7 @@
             Don't have an account? <a class="register-link" href="#">Register</a>
         </div>
     </form>
+    
 </div>
 <div class="form-box register">
     <h2>Register</h2>
