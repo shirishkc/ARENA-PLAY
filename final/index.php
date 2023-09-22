@@ -106,10 +106,10 @@
                      <p><ion-icon name="location"></ion-icon> Ranipauwa Marga 11, Pokhara 33700</p>
                     </div>
                     <div>
-                        <p><ion-icon name="call"></ion-icon>061580820</p>
+                        <p><ion-icon name="call"></ion-icon>061-654321</p>
                        </div>
                        <div>
-                        <p><ion-icon name="mail"></ion-icon>lorem@gmail.com</p>
+                        <p><ion-icon name="mail"></ion-icon>arenaplay@gmail.com</p>
                        </div>
                 <div class="condown"></div>
                 </div>
