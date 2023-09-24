@@ -14,10 +14,8 @@ $sql = "SELECT * FROM register WHERE phone = '$phone'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Login successful
-    echo "<script>alert('The phone number you entered has already been registered.');
-    window.location.href='../login.php';
-    </script>";
-    // echo"</br><p>Go to <a href='../login.php'>Login</a> page</p>";
+    echo "<script>alert('The phone number you entered has already been registered.');</script>";
+    echo"</br><p>Go to <a href='../login.php'>Login</a> page</p>";
     exit();
 }
 $email = $_POST['email'];
@@ -39,10 +37,8 @@ $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
 $sql = "INSERT INTO register (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "<script>alert('Registration sucessful!!Click OK to go to login page.');
-    window.location.href='../login.php';
-    </script>";
-    // echo"</br><p>Go to <a href='../login.php'>Login</a> page</p>";
+    echo "<script>alert('Registration sucessful!!');</script>";
+    echo"</br><p>Go to <a href='../login.php'>Login</a> page</p>";
 } else {
     echo "Error: " . $sql . "<br>". mysqli_error($conn);
 }
