@@ -3,7 +3,7 @@ session_start();
 include("../include/dbcon.php");
 
 if (isset($_SESSION['SN'])) {
-    header("Location: ../booking.php");
+    header("Location: ../index.php");
     exit();
 }
 
@@ -42,8 +42,8 @@ $stmt = $conn->prepare("INSERT INTO register (name, phone, email, password) VALU
 $stmt->bind_param("ssss", $name, $phone, $email, $password);
 
 if ($stmt->execute()) {
-    echo "<script>alert('Registration successful!!');</script>";
-    echo "</br><p>Go to <a href='../login.php'>Login</a> page</p>";
+    echo "<script>alert('Registration successful!!'); window.location.href='../index.php';</script>";
+    // header("login.php");
 } else {
     echo "Error: " . $stmt->error;
 }
@@ -84,7 +84,7 @@ try {
     $mail->Body    = '<b>You have been successfully registered on ArenaPlay. Thank you for registering!</b>';
 
     $mail->send();
-    echo 'Message has been sent';
+    // header("../index.php");    
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

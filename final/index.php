@@ -34,7 +34,7 @@
         <div class="container second">
             <h2>Book Your Arena Today</h2>
             <div>
-                <a href="booking.html" ><button class="btn book">Book Now</button></a>
+                <a href="booking.php" ><button class="btn book">Book Now</button></a>
             </div>
         </div>
     </div>
