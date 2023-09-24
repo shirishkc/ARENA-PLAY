@@ -125,7 +125,7 @@ if (isset($_SESSION['SN'])) {
         </div>
         <div class="form-box register">
             <h2>Register</h2>
-            <form action="sucess/registersucess.php" method="POST">
+            <form action="success/registersucess.php" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" name="name" required>

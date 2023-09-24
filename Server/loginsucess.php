@@ -34,6 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $row = $result->fetch_assoc();
             $sn = $row['SN'];
             $_SESSION['SN'] = $sn;
+
+                
+
             header('Location: ../booking.php');
         } else {
             // Password is incorrect, display an error message or deny access
