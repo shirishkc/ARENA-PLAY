@@ -81,9 +81,9 @@ if (isset($_SESSION['SN'])) {
     <header>
         <img class="logo" src="Artboard 2_2.png" alt="#">
         <nav class="navigation">
-            <a href="index.hphp">Home</a>
+            <a href="index.php">Home</a>
             <a href="index.php#about">About</a>
-            <a href="booking.hphp">Booking</a>
+            <a href="booking.php">Booking</a>
             <a href="index.php#contact">Contact</a>
             <a href="login.php">
                 <svg class="person" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -105,8 +105,8 @@ if (isset($_SESSION['SN'])) {
                 ?>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" name="email" required>
-                    <label>Email</label>
+                    <input type="text" name="phone" required>
+                    <label>Phone</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
@@ -129,7 +129,7 @@ if (isset($_SESSION['SN'])) {
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" name="name" required>
-                    <label>Username</label>
+                    <label>Name</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="call"></ion-icon></span>

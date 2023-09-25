@@ -10,8 +10,9 @@ require '../vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
-$mail=$_POST["email"];
+$email=$_POST["email"];
 $name=$_POST["name"];
+$number=$_POST["number"];
 $message=$_POST["message"];
 
 try {
@@ -28,10 +29,15 @@ try {
 
     //Recipients
 
-    $mail->setFrom('snabin793@gmail.com', 'Nabin Paudel');
+    $mail->setFrom('snabin793@gmail.com', 'ArenaPlay');
     $mail->addAddress('pnabin73@gmail.com', 'Nabin Paudel');
-    $mail->Subject = 'PHPMailer Test';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = 'Message from ArenaPlay user : '.$name;
+    $mail->Body    = $message. ' <b>in bold!</b>
+    <br> User details : 
+    <br> Name: '.$name.'
+    <br> Email: '.$email.'
+    <br> Phone Number: '.$number.'
+    ';
 
 
     // $mail->setFrom('paudelnabin11@gmail.com', 'Nabin');
@@ -47,18 +53,25 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = 'Message from ArenaPlay user :'.$name;
+    $mail->Body    = $message. ' 
+    <br> User details : 
+    <br> Name: '.$name.'
+    <br> Email: '.$email.'
+    <br> Phone Number: '.$number.'
+    ';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-    $mail->SMTPDebug = 2; // Set the debug level (0 for no output, 1 for basic output, 2 for detailed output)
+    $mail->SMTPDebug = 0; // Set the debug level (0 for no output, 1 for basic output, 2 for detailed output)
 
 
     $mail->send();
-    echo 'Message has been sent';
+    echo "<script>alert('Your message has been sent.'); window.location.href='../../index.php';</script>";
+    // echo "<script>
+    // alert('Your message has been sent.');
+    // windows.location.href='../../index.php';
+    // </script>";
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 $mail->smtpClose();
-?>
-
 

@@ -1,4 +1,5 @@
 <?php
+include("../include/dbcon.php");
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -6,14 +7,12 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
-$mail=$_POST["email"];
-$name=$_POST["name"];
-$message=$_POST["message"];
-
+$sqlMail="select email from register where SN ='$sn'";
+$sqlName="select name form register where SN='$sn'";
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -29,9 +28,9 @@ try {
     //Recipients
 
     $mail->setFrom('snabin793@gmail.com', 'Nabin Paudel');
-    $mail->addAddress('pnabin73@gmail.com', 'Nabin Paudel');
-    $mail->Subject = 'PHPMailer Test';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->addAddress($sqlMail, $sqlName);
+    $mail->Subject = 'ArenaPlay registration';
+    $mail->Body    = '<b>You haev been sucessfully regietered on ArernaPlay. Thank you fro registering into ArenaPlay.</b>';
 
 
     // $mail->setFrom('paudelnabin11@gmail.com', 'Nabin');
@@ -60,5 +59,3 @@ try {
 }
 $mail->smtpClose();
 ?>
-
-
