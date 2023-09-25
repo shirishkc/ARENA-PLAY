@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  include("include/dbcon.php");
+  if (!isset($_SESSION['SN'])) {
+    header("Location: login.php");
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,11 +20,11 @@
     <header>
       <img class="logo" src="Artboard 2_2.png" alt="#" />
       <nav class="navigation">
-        <a href="index.html">Home</a>
-        <a href="#">About</a>
-        <a href="booking.html">Booking</a>
-        <a href="#">Contact</a>
-        <a href="login.html">
+        <a href="index.php">Home</a>
+        <a href="index.php#about">About</a>
+        <a href="booking.php">Booking</a>
+        <a href="index.php#contact">Contact</a>
+        <a href="login.php">
           <svg
             class="person"
             xmlns="http://www.w3.org/2000/svg"
