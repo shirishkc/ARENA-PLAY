@@ -46,6 +46,7 @@
           echo $SN;
         ?>
       </form>
+      <a href="Server/displaybookings.php">Show my bookings</a>
     </div>
   </body>
 

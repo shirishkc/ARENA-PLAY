@@ -1,6 +1,6 @@
 <?php
 include("../include/dbcon.php"); 
-session_start();
+// session_start();
 // if (!isset($_SESSION['user_id'])) {
 //   header('Location: ../login.php');
 //   exit();
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO bookings (date, time ,SN) VALUES ('$date', '$time','$SN')";
     if (mysqli_query($conn, $sql)) {
       echo "Booking successful! Please reach the arena on time.</br>";
-      echo"<a href='#'>Go to homepage </a>";
+      echo"<a href='../booking.php'>Go to homepage </a>";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
