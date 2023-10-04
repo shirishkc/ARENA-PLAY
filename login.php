@@ -18,6 +18,7 @@ if (isset($_SESSION['SN'])) {
 <head>
     <title>Login</title>
     <link href="css/login.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>

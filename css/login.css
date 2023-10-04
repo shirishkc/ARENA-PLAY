@@ -166,3 +166,64 @@ body{
     position: absolute;
     transform: translateX(400px);
 }
+
+
+
+
+
+/* Add your default styles here for larger screens (desktops) */
+
+/* Navigation styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.navigation .person {
+    font-size: 24px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add your tablet-specific styles (up to 768px wide) here */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .form-box {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .input-box {
+        margin-bottom: 20px;
+    }
+}
+
