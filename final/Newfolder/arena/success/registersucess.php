@@ -72,12 +72,12 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'snabin793@gmail.com';
-    $mail->Password   = 'wobz qoxr msju gjcb';
+    $mail->Username   = 'bookarenaplay@gmail.com';
+    $mail->Password   = 'cgjc jmsh ivvr wtcq';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('snabin793@gmail.com', 'Nabin Paudel');
+    $mail->setFrom('bookarenaplay@gmail.com', 'ArenaPlay');
     $mail->addAddress($email, $name);
     $mail->isHTML(true);
     $mail->Subject = 'ArenaPlay Registration';

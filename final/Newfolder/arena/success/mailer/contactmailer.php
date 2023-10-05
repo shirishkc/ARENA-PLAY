@@ -21,19 +21,19 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'snabin793@gmail.com';                     //SMTP username
-    $mail->Password   = 'wobz qoxr msju gjcb';                               //SMTP password
+    $mail->Username   = 'bookarenaplay@gmail.com';                     //SMTP username
+    $mail->Password   = 'cgjc jmsh ivvr wtcq';                               //SMTP password
     $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 
     //Recipients
 
-    $mail->setFrom('snabin793@gmail.com', 'ArenaPlay');
-    $mail->addAddress('pnabin73@gmail.com', 'Nabin Paudel');
+    $mail->setFrom('bookarenaplay@gmail.com', 'ArenaPlay');
+    $mail->addAddress('bookarenaplay@gmail.com', 'ArenaPlay');
     $mail->Subject = 'Message from ArenaPlay user : '.$name;
     $mail->Body    = $message. ' <b>in bold!</b>
-    <br> User details : 
+    <br> <br> User details : 
     <br> Name: '.$name.'
     <br> Email: '.$email.'
     <br> Phone Number: '.$number.'
@@ -54,8 +54,8 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Message from ArenaPlay user :'.$name;
-    $mail->Body    = $message. ' 
-    <br> User details : 
+    $mail->Body    = '<b>'.$message.'</b>'. ' 
+    <br> <br> User details : 
     <br> Name: '.$name.'
     <br> Email: '.$email.'
     <br> Phone Number: '.$number.'
