@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lobster Two', cursive;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    padding: 20px 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px  rgb(55, 51, 51);
+    background-color: #DEDAD9;
+    height: 80px;
+}
+.navigation a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    color:  #544c4a;
+    cursor:pointer;
+    font-weight: 500;
+}
+.icon{
+font-size: 30px;
+position: relative;
+top: 6px;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(wallpaperflare.com_wallpaper\ \(1\).jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.container{
+    position: relative;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px  rgb(0,0,0);
+}
+.container.first{
+    width: 700px;
+    height:520px;
+    border: 2px solid rgb(255,255,255,.5);
+    border-radius: 1%;
+    text-align: center;
+    padding: 20px 20px;
+}
+.container.first h3{
+    font-size: 30px;
+}
+.container.second{
+    position: absolute;
+    width: 320px;
+    height:410px;
+    background-color: #544c4a;
+    right: 12%;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 45px 5px 5px;
+    color: #DEDAD9;
+    border-radius: 3%;
+}
+.container.con{
+    position: absolute;
+    width: 370px;
+    height:410px;
+    background-color: #544c4a;
+    left: 10%;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 20px;
+    color: #DEDAD9;
+    border-radius: 3%;
+}
+.container.con h3{
+    margin: 0px 0px 25px;
+}
+.container.con p{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: left;
+}
+.logo{
+    width: 90px;
+    cursor: pointer;
+}
+.btn.book{
+    width: 80%;
+    height: 50px;
+    border-radius:6px;
+    border: none;
+    box-shadow:0 0 30px  rgb(0,0,0);
+    position: absolute;
+    bottom: 45px;
+    right: 25px;
+    cursor: pointer;
+    transition: .7s ease;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #544c4a;
+}
+.facility{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fac{
+    margin: 20px 20px 20px;
+    width: 250px;
+    height:300px;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 45px 5px 5px;
+    border: 2px solid rgb(255,255,255,.5);
+    border-radius: 3%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px  rgb(0,0,0);
+    justify-content: center;
+    align-items: center;
+}
+.fac .content{
+    width: 100%;
+    cursor: pointer;
+}
+.ion{
+    font-size: 2.3em;
+    padding: 20px 20px 20px;
+}
+.facility h3{
+    margin-top: 25px;
+}
+#about{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 40px 40px;
+}
+.container.third{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin:auto;
+    margin-top: 30px;
+    width: 45%;
+    height:fit-content;
+    border: 2px solid rgb(255,255,255,.5);
+    font-size: 22px;
+    border-radius: 1%;
+    padding: 10px 10px 10px;
+}
+ h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 90px 20px 40px;
+    align-items: center;
+    color: #3e2721;
+}
+.contact h1{
+        position: relative;
+        top: 90px;
+}
+.about-main{
+   display: flex;
+}
+.about .abt{
+    width: 35%;
+    position: relative;
+    left: 13%;
+    top: 20px;
+    filter: grayscale(70%);
+    border-radius: 0%;
+    box-shadow:0 0 30px  rgb(0,0,0);
+}
+.contactus{
+    margin-bottom: 100px;
+}
+.input-box{
+   font-size: 60px;
+}
+input{
+    font-size: 20px;
+    border-radius: 5px;
+}
+.msg{
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 150px;
+    width: 60%;
+}
+.btn.submit{
+    width: 50%;
+    height: 50px;
+    border-radius:6px;
+    border: none;
+    box-shadow:0 0 30px  rgb(0,0,0);
+    bottom: 45px;
+    cursor: pointer;
+    transition: .7s ease;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #544c4a;
+}
+.three{
+    cursor: pointer;
+    color: #544c4a;
+    font-size: 2rem;
+    /* display: none; */
+    right: 20px;
+    top: 30px;
+    position: absolute;
+    display: none;
+}
+.logout{
+    position: absolute;
+    top: 25px;
+    right: 4%;
+    cursor: pointer;
+    color: #544c4a;
+    font-size: 1.7rem;
+}
+/* hover */  
+.navigation a:hover{
+    color: rgb(145, 145, 145);
+    border-bottom: 1px solid rgb(145, 145, 145);
+}
+.navigation .three:hover{
+    color: rgb(145, 145, 145);
+}
+.btn:hover{
+    background-color: #9E8C74;
+    color: #DEDAD9;
+}
+
+/* responsive */
+@media only screen and (max-width:800px) {
+    .navigation a{
+        font-size: 20px;
+        margin: 50px;
+    }
+    .icon{
+        font-size: 25px;
+    }
+    .log{
+        position: absolute;
+        right: 5%;
+        top: 20px;
+    }
+    header{
+        display: flex;
+    }
+    .title.about{
+        display: none;
+    }
+    .title.contact{
+        display: none;
+    }
+    h1{
+        font-size: 50px;
+    }
+    header{
+        /* text-align: center;
+        align-items: center; */
+        display: flex;
+        /* flex-direction: column;
+        height: 90px; */
+    }
+    #about{
+        margin: 0px;
+    }
+    .container.first{
+        width: 72%; 
+        height: 320px;
+  }
+  .container.second{
+    width: 30%;
+    height: 250px;
+    right: 20px;
+    font-size: 15px;
+  }
+  .btn.book{
+    width: 70%;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.fac{
+    margin: 10px 10px 10px;
+    width: 15%;
+    height:150px;
+    font-size: .85rem;
+    padding: 25px 5px 5px;
+}
+.container.third{
+    margin-top: 10px;
+    width: 45%;
+    height:fit-content;
+    border: 2px solid rgb(255,255,255,.5);
+    font-size: 12px;
+}
+.about .abt{
+    width: 45%;
+    left: 10%;
+    top: 3px;
+}.container.con{
+    width: 30%;
+    height:300px;
+    left: 15px;
+    font-size: 1rem;
+}
+.container.con h3{
+    margin: 0px 0px 5px;
+}
+.container.con p{
+    font-size: 15px;
+}
+.input-box{
+   font-size: 30px;
+}
+input{
+    font-size: 10px;
+}
+.msg{
+    font-size: 10px;
+    height: 8cqw;
+    width: 50%;
+}
+.btn.submit{
+    width: 40%;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+iframe{
+    height: 350px;
+}
+
+  @media only screen and (max-width:500px) {
+    .navigation a{
+        font-size:15px;
+        margin: 10px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .icon{
+    font-size: 20px;
+    }
+    .log{
+        position: absolute;
+        right: 15%;
+        top: 35px;
+    }
+    .title.about{
+        display: none;
+    }
+    .title.contact{
+        display: none;
+    }
+    .container.first{
+        width: 72%; 
+        height: 320px;
+  }
+  .container.second{
+    width: 30%;
+    height: 250px;
+    right: 20px;
+    font-size: 15px;
+  }
+  .btn.book{
+    width: 70%;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+    .fac{
+        margin: 10px 10px 10px;
+        width: 15%;
+        height:100px;
+        font-size: .4rem;
+        padding:0px;
+    }
+    .container.third{
+        margin-top: 5px;
+        width: 45%;
+        height:fit-content;
+        border: 2px solid rgb(255,255,255,.5);
+        font-size: 9px;
+    }
+    .about .abt{
+        width: 45%;
+        left: 10%;
+        top: 3px;
+    }
+    .container.con{
+        width: 25%;
+        height:200px;
+        left: 15px;
+        font-size: .7rem;
+    }
+    .container.con p{
+        font-size: 9px;
+    }
+    .input-box{
+       font-size: 20px;
+    }
+    input{
+        font-size: 8px;
+    }
+    .msg{
+        font-size: 8px;
+        margin-top: 10px;
+        height:80px;
+        width: 50%;
+    }
+    .btn.submit{
+        width: 40%;
+        height: 30px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    iframe{
+        height: 200px;
+    }
+    
+}
+}
