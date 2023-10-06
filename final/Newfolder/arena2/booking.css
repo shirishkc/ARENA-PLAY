@@ -31,7 +31,7 @@ header{
     background-color: #DEDAD9;
     height: 80px;
 }
-a{
+.navigation a{
     text-decoration: none;
     font-size: 1.5rem;
     margin-left: 40px;
@@ -43,11 +43,7 @@ a{
     cursor:pointer;
     font-weight: 900;
     color: aliceblue;
-}
-.person{
-    position: relative;
-    top: 5px;
-    transition: .5s;   
+    width: 90px;
 }
 body{
     display: flex;
@@ -57,46 +53,11 @@ body{
     background: url(wallpaperflare.com_wallpaper\ \(1\).jpg) no-repeat;
     background-size: cover;
 }
-.logo{
-    width: 90px;
-    cursor: pointer;
-}
-
 .navigation a:hover{
     color: rgb(145, 145, 145);
 }
-body {
-    margin: 0;
-    padding: 0;
-}
-body,
-html {
-    height: 100%;
-}
-
- .md-calendar-booking .mbsc-calendar-text {
-    text-align: center;
-}
-.md-calendar-booking .booking-datetime .mbsc-datepicker-tab-calendar {
-    flex: 1 1 0;
-    min-width: 300px;
-}
-.md-calendar-booking .mbsc-timegrid-item {
-    margin-top: 1.5em;
-}
- .md-calendar-booking .mbsc-timegrid-container {
-    top: 30px;
-}
-.demo-appointment-booking{
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   width: 80%;
-   top: 20%;
-   text-align: center;
-}
 .btn.submit{
-    width: 50%;
+    width: 100px;
     height: 50px;
     border-radius:6px;
     border: none;
@@ -105,11 +66,11 @@ html {
     transition: .7s ease;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #007AFF;
+    color: #544c4a;
     margin: 20px; 
 }
 .btn:hover{
-    background-color: #007AFF;
+    background-color: #544c4a;
     color: #ffffff;
 }
 form{
@@ -122,6 +83,66 @@ form{
     font-size: 30px;
     position: relative;
     top: 6px;
+    }
+    input{
+        width: 100%;
+        height: 50px;
+        border-radius:6px;
+        border: none;
+        box-shadow:0 0 30px  rgb(0,0,0);
+        outline: none;
+        padding: 0 15px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #544c4a;
+        margin: 20px;
+    }
+    .wrapper{
+        position: relative;
+        width: 400px;
+        height:450px;
+        background: transparent;
+        border: 2px solid rgb(255,255,255,.5);
+        backdrop-filter: blur(10px);
+        border-radius: 5%;
+        box-shadow:0 0 30px  rgb(0,0,0) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: height .2s ease;
+    }
+    .wrapper.active{
+        margin-top: 90px;
+        height: 600px;
+    }
+    .wrapper .form-box.login{
+        transform: translateX(0);
+        transition: transform .18s ease;
+    }
+    .wrapper .form-box.register{
+        display: none;
+     }
+     .wrapper.active .form-box.register{
+         transform: translateX(0);
+         transition: transform .18s ease;
+         display: block;
+     }
+     .wrapper.active .form-box.login{
+         transform: translateX(-400px);
+         transition: none;
+         display: none;
+     }
+     .wrapper .form-box.register{
+        top: 10px;
+        position: absolute;
+        transform: translateX(400px);
+    }
+    .register{
+        margin: 10px;
+    }
+    .reg a{
+        color: #544c4a;
+        font-weight: 600;
     }
 /* responsive */
 @media only screen and (max-width:800px) {

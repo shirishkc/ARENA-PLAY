@@ -63,5 +63,11 @@ if (isset($_POST['viewusers'])) {
         </script>");
     }
 }
-
-
+?>
+<html>
+<head>
+<style>
+    background-image: url('wallpaper.jpg');
+</style>
+</head>
+</html>

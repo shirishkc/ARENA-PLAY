@@ -12,7 +12,9 @@ if (!isset($_SESSION['username'])) {
 
 <head>
     <title>Admin</title>
-
+<style>
+    background-image: url('wallpaper.jpg');
+</style>
 </head>
 
 <body>

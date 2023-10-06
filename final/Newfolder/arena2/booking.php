@@ -20,58 +20,36 @@
     <header>
       <img class="logo" src="Artboard 2_2.png" alt="#" />
       <nav class="navigation">
-        <a href="index.php">Home</a>
-        
-        <a class="title about" href="#">About</a>
-        <a href="booking.php">Booking</a>
-        <a class="title contact" href="#">Contact</a>
-        <a href="login.php">
-          <svg
-            class="person"
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="bi bi-person-circle"
-            viewBox="0 0 16 16"
-          >
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-            <path
-              fill-rule="evenodd"
-              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-            />
-          </svg>
-        </a>
-        <a href="logout.php">
+        <a href="index.html">Home</a>
+        <a href="#">
           <ion-icon class="icon log" name="log-out-outline"></ion-icon>
       </a>
       </nav>
-    </header>
-    <form action="">
-        <input name="date" type="text">
-      <div mbsc-page class="demo-appointment-booking">
-        <div style="height: 100%">
-          <div class="md-calendar-booking">
-            <div class="mbsc-form-group">
-              <div class="mbsc-form-group-title">
-                <a class="select" href="#">Select date & time</a>
-              </div>
-              <div id="demo-booking-datetime" class="booking-datetime"></div>
-              <button class="btn submit">Book</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </input>
+    </header> 
+<div class="wrapper">
+  <div class="form-box login">
+    <h1>Futsal Booking</h1>
+    <form action="#">
+     <div class="calender">
+     <div><input class="date" name="date" type="date"></div> 
+     <div><input class="time" name="time" type="time"></div>
+     <div><button class="btn submit">Submit</button></div>
+     </div>
+     <div class="reg">
+      <a class="register-link" href="#">My bookings</a>
+  </div>
     </form>
+</div>
+  <div class="form-box register">
+      <form action="sucess/registersucess.php" method="POST">
+        <h1>My Bookings</h1>
+          <div class="log">
+           <a class="login-link" href="#">Show less</a>
+          </div>
+      </form>
+  </div>
+  </div>
     <script src="booking.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
+
