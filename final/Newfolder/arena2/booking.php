@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  include("include/dbcon.php");
+  if (!isset($_SESSION['SN'])) {
+    header("Location: login.php");
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,14 +20,12 @@
     <header>
       <img class="logo" src="Artboard 2_2.png" alt="#" />
       <nav class="navigation">
-        <a href="index.html">Home</a>
-        <a href="#">
-          <ion-icon class="icon log" name="log-out-outline"></ion-icon>
-      </a>
-        <!-- <a class="title about" href="#">About</a> -->
-        <!-- <a href="booking.html">Booking</a> -->
-        <!-- <a class="title contact" href="#">Contact</a> -->
-        <!-- <a href="login.html">
+        <a href="index.php">Home</a>
+        
+        <a class="title about" href="#">About</a>
+        <a href="booking.php">Booking</a>
+        <a class="title contact" href="#">Contact</a>
+        <a href="login.php">
           <svg
             class="person"
             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +41,10 @@
               d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
             />
           </svg>
-        </a> -->
+        </a>
+        <a href="logout.php">
+          <ion-icon class="icon log" name="log-out-outline"></ion-icon>
+      </a>
       </nav>
     </header>
     <form action="">
