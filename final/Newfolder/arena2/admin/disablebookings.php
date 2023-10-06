@@ -1,4 +1,3 @@
-
 <?php
 include("../include/dbcon.php");
 
@@ -8,41 +7,23 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-if (isset($_POST['disablebookings'])) {
-    $sql = "UPDATE admin SET State = 'disabled' WHERE username = 'admin'";
+if (isset($_POST['bookings'])) {
+    $message = $_POST['message'];
+    $state = $_POST['bookings'];
+    $sql = "UPDATE admin SET State = '$state', message='$message' WHERE username = 'admin'";
     $result = $conn->query($sql);
+?>
+    <script>
+        var state = "<?php echo $state; ?>";
+        if (state == "disabled") {
+            alert("Bookings disabled successfully!!!");
+        } else {
+            alert("Bookings enabled successfully!!!");
+        }
+        window.location.href = 'dashboard.php';
+    </script>
+<?php
 
-    if ($result) {
-        // Successful update
-        echo ("<script>
-        alert('Booking disabled successfully!!!');
-        window.location.href='dashboard.php';
-        </script>");
-    } else {
-        // Update failed
-        echo ("<script>
-        alert('Booking disable failed!!!');
-        window.location.href='dashboard.php';
-        </script>");
-    }
-} elseif (isset($_POST['enablebookings'])) {
-    // Handle the case when the "Enable Bookings" checkbox is checked
-    $sql = "UPDATE admin SET State = 'enabled' WHERE username = 'admin'";
-    $result = $conn->query($sql);
-
-    if ($result) {
-        // Successful update
-        echo ("<script>
-        alert('Booking enabled successfully!!!');
-        window.location.href='dashboard.php';
-        </script>");
-    } else {
-        // Update failed
-        echo ("<script>
-        alert('Booking enable failed!!!');
-        window.location.href='dashboard.php';
-        </script>");
-    }
 } else {
     // No checkbox was checked
     echo ("<script>
@@ -50,16 +31,6 @@ if (isset($_POST['disablebookings'])) {
     window.location.href='dashboard.php';
     </script>");
 }
-// keep the check box checked until changed
-// if (isset($_POST['disablebookings'])) {
-//     echo ("<script>
-//     document.getElementById('disablebookings').checked = true;
-//     </script>");
-// } elseif (isset($_POST['enablebookings'])) {
-//     echo ("<script>
-//     document.getElementById('enablebookings').checked = true;
-//     </script>");
-// }
 
 // Close the database connection after the operations
 $conn->close();

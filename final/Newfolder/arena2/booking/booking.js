@@ -1,6 +1,4 @@
-document.querySelector('.submit').addEventListener('click', function () {
-    alert('Your booking has been requested!');
-});
+
 const wrapper=document.querySelector('.wrapper');
 const loginlink=document.querySelector('.login-link');
 const registerlink=document.querySelector('.register-link');

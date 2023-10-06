@@ -35,39 +35,48 @@ if (isset($_POST['viewbookings'])) {
         </script>");
     }
 }
-// select distinct users who have booked the futsal and show how many times have they booked the futsal
+// View users and their booking coun
 if (isset($_POST['viewusers'])) {
-    $sql = "SELECT r.name,r.SN,count(b.SN) as count
+    $sql = "SELECT r.name, r.phone, COUNT(b.SN) AS count
     FROM register r
-    JOIN bookings b ON b.SN = r.SN group by r.SN order by count desc ";
+    LEFT JOIN bookings b ON b.SN = r.SN
+    GROUP BY r.SN
+    ORDER BY count DESC";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         echo ("<table border='1'>
         <tr>
             <th>Username</th>
+            <th>Phone Number</th>
             <th>Booking Count</th>
-            
         </tr>");
         while ($row = $result->fetch_assoc()) {
             echo ("<tr>
             <td>" . $row['name'] . "</td>
+            <td>" . $row['phone'] . "</td>
             <td>" . $row['count'] . "</td>
-           
         </tr>");
         }
         echo ("</table>");
     } else {
         echo ("<script>
-        alert('No bookings yet!!!');
+        alert('No users yet!!!');
         window.location.href='dashboard.php';
         </script>");
     }
 }
+
+$conn->close();
+
 ?>
 <html>
 <head>
 <style>
-    background-image: url('wallpaper.jpg');
-</style>
+body {
+        background: url(wallpaperflare.com_wallpaper.jpg) no-repeat;
+    }</style>
 </head>
+<body>
+    
+</body>
 </html>

@@ -18,18 +18,25 @@ if (!isset($_SESSION['SN'])) {
 <body>
     <header>
         <img class="logo" src="Artboard 2_2.png" alt="#">
+        <div style="color:#544c4a;">
+        <?php
+        $sql = "SELECT * FROM register WHERE SN = '" . $_SESSION['SN'] . "'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        echo "<h2> Welcome, " . $row["name"] ."</h2>";
+        ?></div>
         <nav class="navigation">
             <a href="index.php">Home</a>
             <a class="title about" href="#about">About</a>
-            <a href="booking.php">Booking</a>
+            <a href="booking/booking.php">Booking</a>
             <a class="title contact" href="#contact">Contact</a>
             <!-- <a href="login.php">
                 <svg class="person" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>     </a> -->
-            <a href="login.php">
-                <ion-icon class="icon" name="person-circle-outline"></ion-icon></a>
+            <!-- <a href="login.php">
+                <ion-icon class="icon" name="person-circle-outline"></ion-icon></a> -->
             <a href="logout.php">
                 <ion-icon class="icon log" name="log-out-outline"></ion-icon>
             </a>
@@ -40,7 +47,7 @@ if (!isset($_SESSION['SN'])) {
         <div class="container second">
             <h2>Book Your Arena Today</h2>
             <div>
-                <a href="booking.php"><button class="btn book">Book Now</button></a>
+                <a href="booking/booking.php"><button class="btn book">Book Now</button></a>
             </div>
         </div>
     </div>

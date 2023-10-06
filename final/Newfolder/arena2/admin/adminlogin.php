@@ -8,18 +8,17 @@ if(isset($_SESSION['username'])){
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <style>
-    background-image: url('wallpaper.jpg');
+    body {
+        background: url(wallpaperflare.com_wallpaper.jpg) no-repeat;
+    }
 </style>
-=======
     <link rel="icon" href="Artboard 2.png">
     <title>Login</title>
     <link href="adminlogin.css" rel="stylesheet">
->>>>>>> 31ad209dd1179cc9cef73bc24edb24f9ee74f2cd
 </head>
 
 
