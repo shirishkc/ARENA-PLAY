@@ -93,9 +93,10 @@ form {
 
 .icon .log{
     font-size: 30px;
-    /* position: relative;
-    top: 6px; */
+    position: relative;
+    top: 6px;
 }
+
 
 input {
     width: 80%;

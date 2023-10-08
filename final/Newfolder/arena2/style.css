@@ -62,6 +62,8 @@ body{
     border-radius: 1%;
     text-align: center;
     padding: 20px 20px;
+    /* background: url(photo.jpg) repeat;
+    background-size: cover; */
 }
 .container.first h3{
     font-size: 30px;

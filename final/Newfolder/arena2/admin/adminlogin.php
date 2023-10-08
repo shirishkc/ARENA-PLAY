@@ -11,18 +11,14 @@ if(isset($_SESSION['username'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <style>
-    body {
-        background: url(wallpaperflare.com_wallpaper.jpg) no-repeat;
-    }
-</style>
+    
     <link rel="icon" href="Artboard 2.png">
     <title>Login</title>
     <link href="adminlogin.css" rel="stylesheet">
 </head>
 
 
-<body>    
+<body style="background-image: url('wallpaperflare.com_wallpaper.jpg');">    
     <div class="wrapper">
         <div class="form-box login">
             <h2>Admin Login</h2>

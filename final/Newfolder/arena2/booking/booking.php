@@ -13,7 +13,7 @@ if (!isset($_SESSION['SN'])) {
   <link rel="stylesheet" href="css/mobiscroll.javascript.min.css" />
   <script src="js/mobiscroll.javascript.min.js"></script>
 
-  <link rel="icon" href="Artboard 2.png" />
+  <link rel="icon" href="../Artboard 2.png" />
   <title>Arena Play | Booking</title>
   <link href="booking.css" rel="stylesheet" />
 
@@ -21,13 +21,15 @@ if (!isset($_SESSION['SN'])) {
 
 <body class="light">
   <header>
+    
     <a href="../index.php"><img class="logo" src="Artboard 2_2.png" alt="#" /></a>
     <nav class="navigation">
       <a href="../index.php">Home</a>
-
-      <a href="logout.php">
-        <ion-icon class="icon log" name="log-out-outline"></ion-icon>
+      <!-- insert log-out-outline.svg in nav bar -->
+      <a href="../logout.php">
+        <ion-icon class="icon log" title="Logout" name="log-out-outline"></ion-icon>
       </a>
+
     </nav>
   </header>
   <?php

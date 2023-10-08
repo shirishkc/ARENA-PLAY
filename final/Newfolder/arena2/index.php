@@ -30,22 +30,17 @@ if (!isset($_SESSION['SN'])) {
             <a class="title about" href="#about">About</a>
             <a href="booking/booking.php">Booking</a>
             <a class="title contact" href="#contact">Contact</a>
-            <!-- <a href="login.php">
-                <svg class="person" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                </svg>     </a> -->
-            <!-- <a href="login.php">
-                <ion-icon class="icon" name="person-circle-outline"></ion-icon></a> -->
             <a href="logout.php">
-                <ion-icon class="icon log" name="log-out-outline"></ion-icon>
+                <ion-icon class="icon log" title="Logout" name="log-out-outline"></ion-icon>
             </a>
         </nav>
     </header>
     <div class="wrapper">
-        <div class="container first"></div>
+        <div class="container first" style="background: url(photo.jpg) repeat;
+    background-size: cover;"></div>
         <div class="container second">
             <h2>Book Your Arena Today</h2>
+            <p>Price: <br> On normal days- Rs 1000 <br>On Saturdays : Rs 1300</p>
             <div>
                 <a href="booking/booking.php"><button class="btn book">Book Now</button></a>
             </div>
