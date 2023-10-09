@@ -8,3 +8,4 @@ registerlink.addEventListener('click',()=>{
 loginlink.addEventListener('click',()=>{
     wrapper.classList.remove('active');
 });
+

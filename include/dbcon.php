@@ -1,7 +1,6 @@
-<?php
-
+<!-- <?php
+//session
 session_start();
-
 //connect to database
 $dbuser="root";
 $dbpass="";
@@ -17,4 +16,6 @@ $conn=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 if ($conn->connect_error){
     echo("Connection error!!");
 }
-?>
+
+
+?> -->
